@@ -32,14 +32,14 @@ const initialData = {
     ],
     customers: [
         { idKhachHang: 1, HoTen: "Mai Hoàng Phúc", SoDienThoai: "0971860284", DiaChi: "Nam Định" },
-        { idKhachHang: 2, HoTen: "Phạm Quốc Thái", SoDienThoai: "0912345678", DiaChi: "Hà Nội" },
+        { idKhachHang: 2, HoTen: "Phạm Quốc Thái", SoDienThoai: "0912345378", DiaChi: "Hà Nội" },
         { idKhachHang: 3, HoTen: "Đỗ Văn Toàn", SoDienThoai: "0987654321", DiaChi: "Hà Nội" },
         { idKhachHang: 4, HoTen: "Nguyễn Văn Nam", SoDienThoai: "0909090909", DiaChi: "Đà Nẵng" },
         { idKhachHang: 5, HoTen: "Lê Thị Mai", SoDienThoai: "0911111111", DiaChi: "Huế" },
         { idKhachHang: 6, HoTen: "Phạm Văn Hùng", SoDienThoai: "0922222222", DiaChi: "Cần Thơ" },
         { idKhachHang: 7, HoTen: "Hoàng Thị Hương", SoDienThoai: "0933333333", DiaChi: "Vinh" },
         { idKhachHang: 8, HoTen: "Đỗ Văn Tùng", SoDienThoai: "0944444444", DiaChi: "Pleiku" },
-        { idKhachHang: 9, HoTen: "Phạm Quốc Thịnh", SoDienThoai: "0912345678", DiaChi: "Hà Nội" },
+        { idKhachHang: 9, HoTen: "Phạm Quốc Thịnh", SoDienThoai: "0912345098", DiaChi: "Hà Nội" },
         { idKhachHang: 10, HoTen: "Lương Hồng Trang", SoDienThoai: "0912345678", DiaChi: "Cao Bằng" },
         { idKhachHang: 11, HoTen: "Dư Tuấn Anh", SoDienThoai: "0912343448", DiaChi: "Hà Nội" },
         { idKhachHang: 12, HoTen: "Nguyễn Văn A", SoDienThoai: "0912349818", DiaChi: "Hải Phòng" },
@@ -60,32 +60,33 @@ const initialData = {
     ],
     orders: [
         { idDonHang: 1, NgayDat: "2026-05-25", TongTien: 330000, TrangThai: "Đã hoàn thành", idKhachHang: 1, idNhanVien: 10 },
-        { idDonHang: 2, NgayDat: "2026-05-26", TongTien: 75000, TrangThai: "Đã hủy", idKhachHang: 3, idNhanVien: 3 },
-        { idDonHang: 3, NgayDat: "2026-05-26", TongTien: 89000, TrangThai: "Chờ xử lý", idKhachHang: 11, idNhanVien: 4 },
+        { idDonHang: 2, NgayDat: "2026-05-26", TongTien: 125000, TrangThai: "Đã hủy", idKhachHang: 3, idNhanVien: 3 },
+        { idDonHang: 3, NgayDat: "2026-05-26", TongTien: 99000, TrangThai: "Chờ xử lý", idKhachHang: 11, idNhanVien: 4 },
         { idDonHang: 4, NgayDat: "2026-05-26", TongTien: 15000, TrangThai: "Chờ xử lý", idKhachHang: 12, idNhanVien: 2 },
-        { idDonHang: 5, NgayDat: "2026-05-27", TongTien: 70000, TrangThai: "Đã hoàn thành", idKhachHang: 5, idNhanVien: 2 },
-        { idDonHang: 6, NgayDat: "2026-05-27", TongTien: 60000, TrangThai: "Đã hoàn thành", idKhachHang: 8, idNhanVien: 5 },
+        { idDonHang: 5, NgayDat: "2026-05-27", TongTien: 50000, TrangThai: "Đã hoàn thành", idKhachHang: 5, idNhanVien: 2 },
+        { idDonHang: 6, NgayDat: "2026-05-27", TongTien: 51000, TrangThai: "Đã hoàn thành", idKhachHang: 8, idNhanVien: 5 },
         { idDonHang: 7, NgayDat: "2026-05-28", TongTien: 48000, TrangThai: "Đã hoàn thành", idKhachHang: 7, idNhanVien: 2 },
         { idDonHang: 8, NgayDat: "2026-05-28", TongTien: 385000, TrangThai: "Đã hoàn thành", idKhachHang: 6, idNhanVien: 8 },
         { idDonHang: 9, NgayDat: "2026-05-28", TongTien: 12000, TrangThai: "Đã hoàn thành", idKhachHang: 9, idNhanVien: 2 },
-        { idDonHang: 11, NgayDat: "2026-05-29", TongTien: 165000, TrangThai: "Đã hoàn thành", idKhachHang: 2, idNhanVien: 4 },
+        { idDonHang: 10, NgayDat: "2026-05-29", TongTien: 48000, TrangThai: "Đã hoàn thành", idKhachHang: 10, idNhanVien: 9 },
+        { idDonHang: 11, NgayDat: "2026-05-29", TongTien: 355000, TrangThai: "Đã hoàn thành", idKhachHang: 2, idNhanVien: 4 },
     ],
     orderDetails: [
         { idDonHang: 1, idSanPham: 1, SoLuong: 3, DonGia: 35000, ThanhTien: 105000 },
         { idDonHang: 1, idSanPham: 2, SoLuong: 9, DonGia: 25000, ThanhTien: 225000 },
-        { idDonHang: 2, idSanPham: 14, SoLuong: 5, DonGia: 15000, ThanhTien: 75000 },
-        { idDonHang: 3, idSanPham: 17, SoLuong: 2, DonGia: 20000, ThanhTien: 40000 },
+        { idDonHang: 2, idSanPham: 14, SoLuong: 5, DonGia: 25000, ThanhTien: 125000 },
+        { idDonHang: 3, idSanPham: 17, SoLuong: 2, DonGia: 12000, ThanhTien: 24000 },
         { idDonHang: 3, idSanPham: 13, SoLuong: 1, DonGia: 25000, ThanhTien: 25000 },
-        { idDonHang: 3, idSanPham: 12, SoLuong: 2, DonGia: 12000, ThanhTien: 24000 },
+        { idDonHang: 3, idSanPham: 12, SoLuong: 2, DonGia: 25000, ThanhTien: 50000 },
         { idDonHang: 4, idSanPham: 11, SoLuong: 1, DonGia: 15000, ThanhTien: 15000 },
-        { idDonHang: 5, idSanPham: 8, SoLuong: 2, DonGia: 35000, ThanhTien: 70000 },
-        { idDonHang: 6, idSanPham: 7, SoLuong: 3, DonGia: 20000, ThanhTien: 60000 },
+        { idDonHang: 5, idSanPham: 8, SoLuong: 2, DonGia: 25000, ThanhTien: 50000 },
+        { idDonHang: 6, idSanPham: 7, SoLuong: 3, DonGia: 17000, ThanhTien: 51000 },
         { idDonHang: 7, idSanPham: 6, SoLuong: 4, DonGia: 12000, ThanhTien: 48000 },
         { idDonHang: 8, idSanPham: 3, SoLuong: 11, DonGia: 35000, ThanhTien: 385000 },
         { idDonHang: 9, idSanPham: 6, SoLuong: 1, DonGia: 12000, ThanhTien: 12000 },
         { idDonHang: 10, idSanPham: 6, SoLuong: 4, DonGia: 12000, ThanhTien: 48000 },
         { idDonHang: 11, idSanPham: 6, SoLuong: 5, DonGia: 12000, ThanhTien: 60000 },
-        { idDonHang: 11, idSanPham: 10, SoLuong: 7, DonGia: 15000, ThanhTien: 105000 },
+        { idDonHang: 11, idSanPham: 10, SoLuong: 7, DonGia: 25000, ThanhTien: 175000 },
         { idDonHang: 11, idSanPham: 16, SoLuong: 3, DonGia: 40000, ThanhTien: 120000 },
     ],
 };
@@ -242,10 +243,6 @@ function getLookupText(field, value) {
         return `Đơn #${match.idDonHang}`;
     }
     return match[field.text];
-}
-
-function fieldForKey(def, key) {
-    return def.fields.find((field) => field.key === key);
 }
 
 function valueForSearch(def, row) {
