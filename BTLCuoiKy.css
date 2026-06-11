@@ -701,12 +701,6 @@ tr:last-child td {
     width: 100%;
   }
 
-  .topbar-actions .ghost-button,
-  .toolbar-right .primary-button,
-  .select-filter {
-    flex: 1 1 auto;
-  }
-
   .metric-grid,
   .form-grid {
     grid-template-columns: 1fr;
