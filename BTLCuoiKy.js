@@ -27,8 +27,8 @@ const initialData = {
         { idSanPham: 15, TenSanPham: "Nước ép thanh long", DonGia: 30000, SoLuongTon: 15, DonViTinh: "Ly", idLoaiSP: 3 },
         { idSanPham: 16, TenSanPham: "Sinh tố dâu", DonGia: 40000, SoLuongTon: 29, DonViTinh: "Ly", idLoaiSP: 5 },
         { idSanPham: 17, TenSanPham: "Pepsi", DonGia: 15000, SoLuongTon: 25, DonViTinh: "Lon", idLoaiSP: 4 },
-        { idSanPham: 17, TenSanPham: "7-up", DonGia: 15000, SoLuongTon: 25, DonViTinh: "Lon", idLoaiSP: 4 },
-        { idSanPham: 17, TenSanPham: "Sprite", DonGia: 15000, SoLuongTon: 25, DonViTinh: "Lon", idLoaiSP: 4 },
+        { idSanPham: 18, TenSanPham: "7-up", DonGia: 15000, SoLuongTon: 25, DonViTinh: "Lon", idLoaiSP: 4 },
+        { idSanPham: 19, TenSanPham: "Sprite", DonGia: 15000, SoLuongTon: 25, DonViTinh: "Lon", idLoaiSP: 4 },
     ],
     customers: [
         { idKhachHang: 1, HoTen: "Mai Hoàng Phúc", SoDienThoai: "0971860284", DiaChi: "Nam Định" },
