@@ -719,76 +719,7 @@ function resetData() {
     showToast("Đã khôi phục dữ liệu mẫu.");
 }
 
-function generateSql() {
-    const statements = [
-        "SET NAMES utf8mb4;",
-        "",
-        "CREATE TABLE IF NOT EXISTS LOAI_SAN_PHAM(",
-        "    idLoaiSP INT AUTO_INCREMENT PRIMARY KEY,",
-        "    TenLoai VARCHAR(100) NOT NULL,",
-        "    MoTa VARCHAR(255)",
-        ");",
-        "CREATE TABLE IF NOT EXISTS KHACH_HANG(",
-        "    idKhachHang INT AUTO_INCREMENT PRIMARY KEY,",
-        "    HoTen VARCHAR(100) NOT NULL,",
-        "    SoDienThoai VARCHAR(15),",
-        "    DiaChi VARCHAR(255)",
-        ");",
-        "CREATE TABLE IF NOT EXISTS NHAN_VIEN(",
-        "    idNhanVien INT AUTO_INCREMENT PRIMARY KEY,",
-        "    TenNhanVien VARCHAR(100) NOT NULL,",
-        "    ChucVu VARCHAR(50)",
-        ");",
-        "CREATE TABLE IF NOT EXISTS SAN_PHAM(",
-        "    idSanPham INT AUTO_INCREMENT PRIMARY KEY,",
-        "    TenSanPham VARCHAR(100) NOT NULL,",
-        "    DonGia DECIMAL(10,2) NOT NULL,",
-        "    SoLuongTon INT NOT NULL,",
-        "    DonViTinh VARCHAR(50),",
-        "    idLoaiSP INT,",
-        "    FOREIGN KEY(idLoaiSP) REFERENCES LOAI_SAN_PHAM(idLoaiSP)",
-        ");",
-        "CREATE TABLE IF NOT EXISTS DON_HANG(",
-        "    idDonHang INT AUTO_INCREMENT PRIMARY KEY,",
-        "    NgayDat DATE NOT NULL,",
-        "    TongTien DECIMAL(12,2),",
-        "    TrangThai VARCHAR(50),",
-        "    idKhachHang INT,",
-        "    idNhanVien INT,",
-        "    FOREIGN KEY(idKhachHang) REFERENCES KHACH_HANG(idKhachHang),",
-        "    FOREIGN KEY(idNhanVien) REFERENCES NHAN_VIEN(idNhanVien)",
-        ");",
-        "CREATE TABLE IF NOT EXISTS CHI_TIET_DON_HANG(",
-        "    idDonHang INT,",
-        "    idSanPham INT,",
-        "    SoLuong INT NOT NULL,",
-        "    DonGia DECIMAL(10,2),",
-        "    ThanhTien DECIMAL(12,2),",
-        "    PRIMARY KEY(idDonHang, idSanPham),",
-        "    FOREIGN KEY(idDonHang) REFERENCES DON_HANG(idDonHang),",
-        "    FOREIGN KEY(idSanPham) REFERENCES SAN_PHAM(idSanPham)",
-        ");",
-        "",
-    ];
 
-    const insertOrder = ["categories", "customers", "employees", "products", "orders", "orderDetails"];
-    insertOrder.forEach((table) => {
-        const rows = state[table];
-        const def = tableDefs[table];
-        if (!rows.length) return;
-
-        const columns = def.fields.map((field) => field.key);
-        const values = rows
-            .map((row) => `(${columns.map((column) => sqlValue(row[column])).join(", ")})`)
-            .join(",\n");
-
-        statements.push(`INSERT INTO ${def.dbName} (${columns.join(", ")}) VALUES`);
-        statements.push(`${values};`);
-        statements.push("");
-    });
-
-    return statements.join("\n");
-}
 
 function showToast(message) {
     toast.textContent = message;
